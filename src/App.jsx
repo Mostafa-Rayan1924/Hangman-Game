@@ -7,7 +7,7 @@ export default function App() {
   return (
     <div className="container mb-10">
       <Header />
-      <div className="flex flex-col md:flex-row border-y-2 py-4 h-[60vh] md:h-[450px] border-slate-200 my-2  gap-4 flex-wrap">
+      <div className="flex box flex-col md:flex-row border-y-2 py-4 h-[70vh] md:h-[450px] border-slate-200 my-2  gap-4 flex-wrap">
         <Man />
         <Letters />
       </div>

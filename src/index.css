@@ -98,3 +98,8 @@ body {
   transform: rotate(-45deg);
   left: calc(20% + 116px);
 }
+@media (max-width: 390px) {
+  .box {
+    height: 90vh;
+  }
+}

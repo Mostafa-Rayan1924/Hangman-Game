@@ -4,7 +4,7 @@ const Man = () => {
       <div className="stand">
         <div className="rope"></div>
       </div>
-      <div className="man hidden">
+      <div className="man ">
         <div className="head"></div>
         <div className="body"></div>
         <div className="handRight"></div>

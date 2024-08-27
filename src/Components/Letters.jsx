@@ -7,7 +7,7 @@ const Letters = () => {
           console.log(item);
           return (
             <h3
-              className="bg-indigo-700 text-white text-2xl md:text-3xl rounded-sm grid place-items-center w-12 md:w-16 h-12 md:h-16 cursor-pointer "
+              className="bg-indigo-700 text-white text-2xl md:text-3xl rounded-sm grid place-items-center w-10 md:w-16 h-10 md:h-16 cursor-pointer "
               key={item}>
               {item}
             </h3>
