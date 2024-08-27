@@ -1,0 +1,30 @@
+const words = {
+  programming: [
+    "php",
+    "javascript",
+    "go",
+    "Node js",
+    "flutter",
+    "mysql",
+    "python",
+  ],
+  movies: [
+    "Me Before You",
+    "Inception",
+    "Interstellar",
+    "i,m a legend",
+    "Cast Away",
+    "Coco",
+    "Up",
+  ],
+  famousPeople: [
+    "Omar Sharif",
+    "Naguib Mahfouz",
+    "Mohamed Salah",
+    "Amr Diab",
+    "Taha Hussein",
+    "Elsisi",
+    "Nancy Ajram",
+  ],
+  countries: ["Syria", "Palestine", "Yemen", "Egypt", "Iraq", "Qatar"],
+};

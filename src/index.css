@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+  overflow-x: hidden;
+}
+body {
+  font-family: "New Amsterdam", sans-serif;
+  letter-spacing: 1px;
+}
+.stand {
+  position: absolute;
+  height: 80%;
+  width: 4px;
+  background-color: black;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20%;
+}
+.stand::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: calc(20% - 50px);
+  background-color: black;
+  height: 4px;
+  width: 100px;
+}
+.stand::before {
+  position: absolute;
+  content: "";
+  top: 10%;
+  background-color: black;
+  left: 20%;
+  width: 100px;
+  height: 4px;
+}
+.rope {
+  position: absolute;
+  position: absolute;
+  content: "";
+  top: 10%;
+  background-color: black;
+  left: calc(20% + 100px);
+  width: 4px;
+  height: 60px;
+}
+.head {
+  position: absolute;
+  top: calc(10% + 70px);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: black;
+  left: calc(20% + 72px);
+}
+.body {
+  position: absolute;
+  top: calc(10% + 130px);
+  width: 4px;
+  height: 90px;
+  background-color: black;
+  left: calc(20% + 100px);
+}
+.handRight {
+  position: absolute;
+  top: calc(10% + 125px);
+  width: 4px;
+  height: 50px;
+  background-color: black;
+  transform: rotate(137deg);
+  left: calc(20% + 83px);
+}
+.handLeft {
+  position: absolute;
+  top: calc(10% + 125px);
+  width: 4px;
+  height: 50px;
+  background-color: black;
+  transform: rotate(-137deg);
+  left: calc(20% + 116px);
+}
+.legRight {
+  position: absolute;
+  top: calc(10% + 185px);
+  width: 4px;
+  height: 50px;
+  background-color: black;
+  transform: rotate(45deg);
+  left: calc(20% + 83px);
+}
+.legLeft {
+  position: absolute;
+  top: calc(10% + 185px);
+  width: 4px;
+  height: 50px;
+  background-color: black;
+  transform: rotate(-45deg);
+  left: calc(20% + 116px);
+}
