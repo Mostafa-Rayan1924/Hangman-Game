@@ -108,3 +108,7 @@ body {
     height: 100vh;
   }
 }
+.clicked {
+  background-color: gray;
+  pointer-events: none;
+}
