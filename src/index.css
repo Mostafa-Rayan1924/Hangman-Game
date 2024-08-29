@@ -103,11 +103,7 @@ body {
     height: 90vh;
   }
 }
-@media (max-width: 360px) {
-  .box {
-    height: 100vh;
-  }
-}
+
 .clicked {
   background-color: gray;
   pointer-events: none;
