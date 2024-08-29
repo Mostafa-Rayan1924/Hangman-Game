@@ -22,7 +22,6 @@ export default function App() {
     let randomWord = words[randomcategory][randomWordNumber];
     setRandomWord(randomWord);
   }
-
   useEffect(() => {
     getRandomWordAndCat();
   }, []);
@@ -79,6 +78,13 @@ export default function App() {
         break;
     }
   }
+  function resetGame() {
+    setWrongLength(0);
+    getRandomWordAndCat();
+    setWordIndexArr([]);
+    const clickedElements = document.querySelectorAll(".clicked");
+    clickedElements.forEach((element) => element.classList.remove("clicked"));
+  }
   function win(updatedIndexes) {
     let randomWordWithOutSpace = randoomWord.split("").filter((item) => {
       return item !== " ";
@@ -86,19 +92,13 @@ export default function App() {
     if (updatedIndexes?.length == randomWordWithOutSpace.length) {
       setTimeout(() => {
         Swal.fire({
-          title: "WINNER!😍",
+          title: "WINNER!😍The Word is : " + randoomWord,
           text: GreetingMsg(),
           icon: "success",
           confirmButtonText: "Complete Playing",
-        }).then((result) => {
-          if (result.isConfirmed) {
-            // Reload the page
-            window.location.reload();
-          }
         });
+        resetGame();
       }, 200);
-      setWrongLength(0);
-      setWordIndexArr([]);
     }
   }
   function endGame() {
@@ -109,12 +109,8 @@ export default function App() {
           text: " You Lost The Word is: " + randoomWord,
           icon: "error",
           confirmButtonText: "Play Again",
-        }).then((result) => {
-          if (result.isConfirmed) {
-            // Reload the page
-            window.location.reload();
-          }
         });
+        resetGame();
       }, 200);
       setWrongLength(0);
     }
@@ -129,11 +125,7 @@ export default function App() {
       <Header randomCat={randomCat} wrongLength={wrongLength} />
       <div className="flex box flex-col md:flex-row border-y-2 py-4 h-[70vh] md:h-[450px] border-slate-200 my-2  gap-4 flex-wrap">
         <Man wrongLength={wrongLength} />
-        <Letters
-          // win={win}
-          randoomWord={randoomWord}
-          getAllIndexes={getAllIndexes}
-        />
+        <Letters randoomWord={randoomWord} getAllIndexes={getAllIndexes} />
       </div>
       <TheWord wordIndexArr={wordIndexArr} randoomWord={randoomWord} />
     </div>
